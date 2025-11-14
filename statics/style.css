@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    padding: 0 40px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav #part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav #part2 a{
+    text-decoration: none;
+    color: black;
+    margin: 20px;
+    font-family: "Work sans";
+}
+
+#nav #part2 a:nth-last-child(1){
+    padding: 7px 18px;
+    position: relative;
+    border-radius: 50px;
+    border: 1px solid black;
+    /* background-color: green; */
+    /* color: yellow; */
+    overflow: hidden;
+}
+
+#nav #part2 a:nth-last-child(1) h5{
+    font-weight: 500;
+    font-family: "Work sans";
+    /* color: black; */
+    position: relative;
+    z-index: 99;
+}
+
+#nav #part2 a:nth-last-child(1) #green{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    transition: left 0.6s ease;
+    background-color: springgreen;
+}
+
+#nav #part2 a:nth-last-child(1):hover #green{
+    left: 0;
+}
+
+#main>h1{
+    width: 60%;
+    font-size: 5.5vw;
+    font-weight: 100;
+    text-align: center;
+    text-transform: capitalize;
+    z-index: 99;
+    /* background-color: red; */
+}
+
+#main>h1::after{
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 10px;
+    left: 50%;
+    bottom: 36%;
+    transform: translate(-50%,0);
+    background-image: url(image-1.svg);
+    background-size: cover;
+    /* background-color: springgreen; */
+}
+
+#main #img1{
+    height: 425px;
+    width: 275px;
+    position: absolute;
+    top: 18%;
+    left: 5%;
+}
+#main #img2{
+    height: 225px;
+    width: 235px;
+    position: absolute;
+    top: 20%;
+    right: 25%;
+    z-index: 1;
+}
+#main #img3{
+    height: 275px;
+    width: 275px;
+    position: absolute;
+    top: 50%;
+    right: 7%;
+}
+
+#main img{
+    transition: margin 0.5 s ease;
+}
+
+#main img:hover{
+    margin-top: -10px;
+}
